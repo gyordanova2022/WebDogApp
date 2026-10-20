@@ -18,7 +18,12 @@ namespace WebDogApp.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Accessories()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
         {
             return View();
         }
