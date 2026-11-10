@@ -2,6 +2,61 @@
     ViewData["Title"] = "Home Page";
 }
 
+<style>
+    .carousel-item {
+        height: 450px; /* Задайте желаната фиксирана височина */
+        width: 1200px;
+    }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Изрязва снимката пропорционално, за да запълни
+    контейнера */
+            object-position: center; /* Центрира фокуса на изображението */
+        }
+</style>
+
+<!-- Bootstrap 5 Слайдшоу -->
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+
+            <img src="https://encrypted-
+tbn0.gstatic.com/images?q=tbn:ANd9GcTnbGzzY3xe4dCnVAiLYZFIOVt1OUg4McLE-
+oXNHoTMfQ&s=10" class="d-block w-100" alt="...">
+
+        </div>
+        <div class="carousel-item">
+
+            <img src="https://encrypted-
+tbn0.gstatic.com/images?q=tbn:ANd9GcRo1vzdbZUCTd6VX56Dbz8zjrcqMhFyMRxSPeleZvZiyQ&s=1
+
+0" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaY-
+OcIyRC8IKBDJq8UJOchz2jDuDxMThOuSdGL5wnJw&s=10" class="d-block w-100" alt="...">
+
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-
+            target="#carouselExample" data-bs-slide="prev">
+
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-
+            target="#carouselExample" data-bs-slide="next">
+
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
 <div class="container mt-5">
     <div class="text-center">
         <h1 class="display-4 fw-bold text-primary">
