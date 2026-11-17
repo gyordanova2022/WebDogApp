@@ -26,10 +26,11 @@ namespace WebDogApp.Core.Services
                 Name = name,
                 Age = age,
                 Breed = _context.Breeds.Find(breedId),
-                Picture = picture,
-            };
+                Picture = picture
+            }; 
+            _context.Dogs.Add(item);
+            return _context.SaveChanges() !=0;
 
-           
         }
         public Dog GetDogById(int dogId)
         {
@@ -45,7 +46,7 @@ namespace WebDogApp.Core.Services
         public List<Dog> GetDogs(string searchStringBreed, string searchStringName)
         {
             List<Dog> dogs = _context.Dogs.ToList();
-            if (!String.IsNullOrEmpty(searchStringBreed) && !String.IsNullOrEmpty(searchStringName)
+            if (!String.IsNullOrEmpty(searchStringBreed) && !String.IsNullOrEmpty(searchStringName))
                 {
                 dogs = dogs.Where(d => d.Breed.Name.Contains(searchStringBreed) && d.Name.Contains(searchStringName)).ToList();
             }
