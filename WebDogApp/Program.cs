@@ -39,6 +39,7 @@ namespace WebDogApp
 
             builder.Services.AddControllersWithViews();
             builder.Services.AddTransient<IBreedService, BreedServices>();
+            builder.Services.AddTransient<IDogService, DogService>();
             var app = builder.Build();
             app.PrepareDatabase();
 
